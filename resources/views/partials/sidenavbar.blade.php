@@ -8,7 +8,7 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('all_posts') }}">
+                <a class="nav-link" href="{{ route('posts.index') }}">
                     <span data-feather="file"></span>
                     المقالات
                 </a>
@@ -22,7 +22,7 @@
         </h6>
         <ul class="nav flex-column mb-2">
             <li class="nav-item">
-                <a class="nav-link" href="{{ route('registered_users') }}">
+                <a class="nav-link" href="{{ route('users.index') }}">
                     <span data-feather="file-text"></span>
                     Admins
                 </a>

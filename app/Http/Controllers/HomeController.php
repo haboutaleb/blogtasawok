@@ -38,6 +38,11 @@ class HomeController extends Controller
         
         return view('home', $data);
     }
+
+
+
+    
+    /*
     public function getRegisteredUsers()
     {
         $users = User::orderBy('id', 'DESC')->get();
@@ -139,5 +144,5 @@ class HomeController extends Controller
         }
         return redirect()->back();
 
-    }
+    } */
 }

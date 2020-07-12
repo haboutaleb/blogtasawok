@@ -29,7 +29,7 @@
                             <td>{{ $user->email }}</td>
                             <td>{{ $user->created_at->format('d-m-Y') }}</td>
                             <td>{{ $user->type }}</td>
-                           <td><a href="{{ route('edit_registered_users', ['user_id' => $user->id]) }}" class="card-link btn btn-primary">تعديل</a>
+                           <td><a href="{{ route('users.edit', ['user_id' => $user->id]) }}" class="card-link btn btn-primary">تعديل</a>
                                         {{ csrf_field() }}
                                         <button type="submit" class="btn btn-danger" >حذف</button>
                                     </form><td>

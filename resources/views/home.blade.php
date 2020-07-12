@@ -55,8 +55,8 @@
                             <ul class="list-group list-group-flush">
                                 @foreach($new_posts as $post)
                                     <li class="list-group-item">{{ $post->title }}</li>
-                                  @if($post->author=="auth")  <a href="{{ route('edit_post_form', ['post_id' => $post->id]) }}" class="card-link btn btn-primary">تعديل</a>@endif
-                                    <form action="{{ route('delete_post', ['post_id' => $post->id]) }}" method="post"><br>
+                                  @if($post->author=="auth")  <a href="{{ route('posts.edit', ['post_id' => $post->id]) }}" class="card-link btn btn-primary">تعديل</a>@endif
+                                    <form action="{{ route('posts.destroy', ['post_id' => $post->id]) }}" method="post"><br>
                                         {{ csrf_field() }}
                                         @if($post->author=="auth")  <button type="submit" class="btn btn-danger" >حذف</button>@endif
                                     </form>

@@ -7,7 +7,7 @@
                 <div class=" align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">كل المنشورات
                     </h1>
-                     <a href="{{ route('create_post') }}" class="btn btn-primary float-right">اضف مقالة</a>
+                     <a href="{{ route('posts.create') }}" class="btn btn-primary float-right">اضف مقالة</a>
                 </div>
                 @if (session('status'))
                     <div class="alert alert-success">
@@ -27,8 +27,8 @@
                                         {{ $post->body }}
                                     </p>
                          
-                                   <a href="{{ route('edit_post_form' ,$post->getRouteKey())}}" class="card-link btn btn-primary">تعديل</a>
-                                    <form action="{{ route('delete_post', ['post_id' => $post->id]) }}" method="post"><br>
+                                   <a href="{{ route('posts.edit' ,$post->getRouteKey())}}" class="card-link btn btn-primary">تعديل</a>
+                                    <form action="{{ route('posts.destroy', ['post_id' => $post->id]) }}" method="post"><br>
                                         {{ csrf_field() }}
                                        <button type="submit" class="btn btn-danger" >حذف</button>
                                     </form>

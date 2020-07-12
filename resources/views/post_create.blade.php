@@ -7,7 +7,7 @@
                 <div class="align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">عمل مقالة</h1>
                 </div>
-                    <form action="{{ route('store_new_post') }}" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('posts.store') }}" method="post" enctype="multipart/form-data">
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label for="title">العنوان الرئيسي</label>
